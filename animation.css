@@ -1,0 +1,45 @@
+
+.square {
+    --direction-y: 30px;
+    --transparency: 0;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    position:absolute;
+    animation: square 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+
+@keyframes square {
+    0% {
+        transform: translateY(var(--direction-y));
+        opacity: var(--transparency);
+    }
+    40%{
+        opacity: calc(var(--transparency) + 0.2);
+    }
+    70%{
+        opacity: calc(var(--transparency) + 0.1);
+    }
+    100%{
+        opacity: var(--transparency);
+    }
+}
+
+@keyframes changeColor{
+    0%{
+        left:0px;
+        background-color: black;
+        border-radius: 0px;
+        opacity: 1;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        left:200px;
+        border-radius: 50%;
+        background-color: blue;
+        opacity: 0;
+    }
+}
